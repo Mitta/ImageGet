@@ -2,6 +2,7 @@
 
 import sys, getopt, json, uuid
 import requests
+import urllib.request
 
 google_api_key = ""
 cx = ""
@@ -60,12 +61,18 @@ def downloadPictures(page_index):
 
 
 def usage():
+    print("ImageGet")
+    print("-------------------------------------------")
+    print("This simple script pull images from the Google Search Engine API and stores them on disk.")
+    print("")
     print("-g   Required. Specify your google api key.")
     print("-k   Required. The keyword the custom search needs to search on.")
     print("-n   Optional. The amount of images that is saved to the target directory. Defaults to 10")
     print("-d   Optional. The target directory where the images are saved. Defaults to working directory")
     print("-c   Required. The cx search engine ID which is needed to use the Google Custom Search API")
     print("-h   Display usage")
+    print("")
+    print("Made by ByMitta. https://mitta.github.io")
 
 
 if __name__ == "__main__":
